@@ -1,0 +1,9 @@
+Which of the following methods can be invoked by an object of Pattern class? 
+Ans: 
+methods which can be invoked by an object of java.util.regex.Pattern class
+(from the available list) are: compile, matches and toString
+
+What are the legal modifiers which the constructor can be declared with? 
+Ans:
+public, private and protected are allowed
+static, final and abstract are not allowed
