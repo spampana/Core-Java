@@ -77,3 +77,40 @@ public static <T> void checkList(List<?> myList, T obj){
             System.out.println("The list does not contain the element: " + obj);
         }
     }
+
+    
+
+Using Generics in Java SE 8 Constructs
+---------------------------------------
+We've seen how to use generics and why they are important. Now let's look at the use case for generics with respect 
+to a new construct in Java SE 8, lambda expressions. Lambda expressions represent an anonymous function that implements 
+the single abstract method of a functional interface. There are many functional interfaces available for use, and lots of them 
+make use of generics. Let's take a look at an example.
+
+Suppose we wanted to traverse over a list of book titles (Strings), and compare the titles so that we could return all titles 
+that contained specified search words. We could do this by developing a method that accepts the list of book titles, 
+along with the predicate that we wanted to use for performing the comparison. The Predicate functional interface can be used for 
+comparison purposes, returning a boolean to indicate if a given object satisfies the requirements of a test. 
+The Predicate interface can be used with objects of all types, because it has the following generic signature:
+
+@FunctionalInterface
+public interface Predicate<T>{
+...
+}
+
+If we wished to traverse over each book title and look for those that contained the text "Java EE," we could pass contains("Java EE") as the predicate argument. The method shown in Listing 15 can be used to traverse a given list of book titles and apply such a predicate, printing out those titles that match. In this case, the accepted arguments are using generics to indicate a List of Strings and a predicate that will test each String.
+
+public static void compareStrings(List<String> list, Predicate<String> predicate) {
+    list.stream().filter((n) -> (predicate.test(n))).forEach((n) -> {
+        System.out.println(n + " ");
+    });
+}    
+
+The code below could be used to populate a list of book titles, and then print out all the book titles that contain the text "Java EE."
+
+List<String> bookList = new ArrayList<>();
+bookList.add("Java 8 Recipes");
+bookList.add("Java EE 7 Recipes");
+bookList.add("Introducing Java EE 7");
+bookList.add("JavaFX 8:  Introduction By Example");
+compareStrings(bookList, (n)->n.contains("Java EE"));
