@@ -1,4 +1,4 @@
-package com.helpezee.MapFilterReduceSort;
+package com.helpezee.mapfilterreducesort;
 
 import java.util.ArrayList;
 import java.util.Comparator;

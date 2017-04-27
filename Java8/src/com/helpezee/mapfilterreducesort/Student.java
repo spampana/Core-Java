@@ -1,4 +1,4 @@
-package com.helpezee.MapFilterReduceSort;
+package com.helpezee.mapfilterreducesort;
 
 public class Student implements Comparable<Student> {
 	private int id;
