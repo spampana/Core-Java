@@ -2,7 +2,7 @@ http://www.oracle.com/technetwork/articles/java/juneau-generics-2255374.html
 http://www.oracle.com/technetwork/java/javase/overview/java8-2100321.html
 
 Generics
--------
+--------
 
 There are many different use cases for generics. 
 
