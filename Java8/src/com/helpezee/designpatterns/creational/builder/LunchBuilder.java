@@ -1,4 +1,4 @@
-package com.helpezee.designpatterns.creational;
+package com.helpezee.designpatterns.creational.builder;
 
 public class LunchBuilder {
 

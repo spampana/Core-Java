@@ -1,4 +1,4 @@
-package com.helpezee.designpatterns.creational;
+package com.helpezee.designpatterns.creational.singleton;
 
 public class TestSingleton {
 
