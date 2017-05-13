@@ -2,11 +2,11 @@ package com.helpezee.designpatterns.creational.singleton;
 
 public class Singleton {
 	
-	// Load Loading
+	// Lazy Loading , its a private instance
 	public static Singleton instance = null; 
 
 	//Disabling the object creation using constructor with private
-	private Singleton() {}
+	private Singleton() {} 
 
 	public static Singleton getInstance() {
 		
