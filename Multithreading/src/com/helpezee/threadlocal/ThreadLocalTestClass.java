@@ -3,6 +3,16 @@ package com.helpezee.threadlocal;
 class MyThreadLocalDemo extends Thread {
 
 	ThreadLocal<Integer> threadLocalValue = new ThreadLocal<>();
+	
+	//Initial ThreadLocal Value
+	private ThreadLocal myThreadLocal = new ThreadLocal<String>() {
+		//you can specify an initial value for a ThreadLocal object by subclassing ThreadLocal and overriding the initialValue() method.
+	    @Override 
+	    protected String initialValue() {
+	        return "This is the initial value";
+	    }
+	};   
+	
 	int value;
 
 	public MyThreadLocalDemo(String name) {
