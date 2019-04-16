@@ -43,3 +43,5 @@ public class InheritableThreadLocalTest {
 	}
 
 }
+
+//Refer : https://helpezee.wordpress.com/2019/04/15/inheritablethreadlocal/
