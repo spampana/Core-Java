@@ -8,11 +8,11 @@ Arrays.sort uses dual-pivot Quicksort on primitives.
 Collections.Sort, it uses a modified mergesort and offers guaranteed n log(n) performance.
 
 
-Java 8 comes with a new API – parallelSort – with a similar signature to the Arrays.sort() API:
+Java 8 comes with a new API â€“ parallelSort â€“ with a similar signature to the Arrays.sort() API:
 
 Behind the scenes of parallelSort(), it breaks the array into different sub-arrays (as per granularity in the algorithm of parallelSort).Each sub-array is sorted with Arrays.sort() in different threads so that sort can be executed in parallel fashion and are merged finally as a sorted array.
 
-Java 8 comes with two new APIs useful for sorting – comparing() and thenComparing() in the Comparator interface.
+Java 8 comes with two new APIs useful for sorting â€“ comparing() and thenComparing() in the Comparator interface.
 These are quite handy for chaining of multiple conditions of the Comparator.
 
 
@@ -26,7 +26,7 @@ For Int(Primitive Data types) use IntStream.of(arr)
 Comparable
 ----------
 Comparable interface enables the natural ordering of the classes it implements. 
-It makes the classes comparable to it’s instances.
+It makes the classes comparable to itâ€™s instances.
 
 A class implementing Comparable interface must override compareTo() method in which it can specify the comparison logic between two instances of same class.
 
@@ -42,7 +42,7 @@ Many times we face situation where we do not seek natural ordering or class file
 In this case, we can take help of Comparator interface.
 
 Comparator does not require to modify the source code of the class. 
-We can create the comparison logic in separate class which implement Comparator interface and override it’s compare() method. 
+We can create the comparison logic in separate class which implement Comparator interface and override itâ€™s compare() method. 
 Then pass this comparator to sort() methods along with list of custom objects.
 
 
@@ -112,12 +112,9 @@ Considering Null Values in Comparator
  The thenComparing function lets you set up lexicographical ordering of values by provisioning multiple sort keys in a particular sequence.
  
  		
- 	Comparator<Employee> employee_Age_Name_Comparator = 
+    Comparator<Employee> employee_Age_Name_Comparator = 
  		Comparator.comparing(Employee::getAge).thenComparing(Employee::getName);
     Arrays.sort(someMoreEmployees, employee_Age_Name_Comparator);
 
     
 
-Misc
-----
-Refer to the link ->     https://www.baeldung.com/java-8-comparator-comparing   to dig more..... 
