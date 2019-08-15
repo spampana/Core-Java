@@ -43,3 +43,11 @@ public class ConcurrentModificationExceptionExample {
 
 	}
 }
+/*
+ From the output stack trace, its clear that the concurrent modification exception is coming when we call iterator next() function. 
+ 
+ If you are wondering how Iterator checks for the modification, its implementation is present in AbstractList class where 
+ an int variable modCount is defined. modCount provides the number of times list size has been changed. 
+ 
+ modCount value is used in every next() call to check for any modifications in a function checkForComodification().
+ */
