@@ -1,4 +1,4 @@
-package com.helpezee.terminaloperations;
+package com.helpezee.streams;
 
 import java.util.ArrayList;
 import java.util.List;

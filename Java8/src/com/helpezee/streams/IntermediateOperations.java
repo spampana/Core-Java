@@ -1,4 +1,4 @@
-package com.helpezee.IntermediateOperations;
+package com.helpezee.streams;
 
 import java.util.ArrayList;
 import java.util.Arrays;
