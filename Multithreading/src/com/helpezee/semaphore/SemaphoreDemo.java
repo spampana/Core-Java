@@ -53,7 +53,6 @@ public class SemaphoreDemo {
 		person5.start();
 		person6.start();
 	}
-
 }
 
 //Refer : https://helpezee.wordpress.com/2019/04/16/semaphore/

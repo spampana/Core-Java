@@ -70,7 +70,6 @@ public class ConcurrentHashMapExample {
         conmap2.put(5, "I");  
           
         conmap2.forEach((key, value) -> conmap.merge( key, value, (v1, v2) -> v1.equalsIgnoreCase(v2) ? v1 : v1 + "," + v2));  
-
         System.out.println(conmap);  
 		
 		

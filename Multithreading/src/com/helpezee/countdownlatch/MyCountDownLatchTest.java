@@ -44,6 +44,14 @@ class DisplayService extends Thread{
 		
 	}
 }
+
+/**
+ * Java program to demonstrate How to use CountDownLatch in Java. CountDownLatch is
+ * useful if you want to start main processing thread once its dependency is completed
+ * as illustrated in this CountDownLatch Example
+ * 
+ * @author Satyanarayana
+ */
 public class MyCountDownLatchTest {
 
 	public static void main(String[] args) {
@@ -61,15 +69,20 @@ public class MyCountDownLatchTest {
 		service3.start();
 		service4.start();
 		service5.start();
+		
+		/* 
+		 application should not start processing any thread until all service is up and ready to do there job.
+	     Countdown latch is idle choice here, main thread will start with count 5  and wait until count reaches zero. 
+	     each thread once up and read will do a count down. 
+	     this will ensure that main thread is not started processing until all services is up.
+	     
+	     count is 5 since we have 5 Threads (Services) 
+	     */
 		try {
-			countDownLatch.await();
+			countDownLatch.await(); //main thread is waiting on CountDownLatch to finish
 		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		System.out.println(Thread.currentThread().getName()+" started server");
-		
-
 	}
-
 }

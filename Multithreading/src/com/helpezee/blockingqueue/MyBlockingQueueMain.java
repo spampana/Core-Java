@@ -48,10 +48,7 @@ class Consumer implements Runnable{
 		catch(Exception ex){
 			
 		}
-		
 	}
-
-	
 }
 public class MyBlockingQueueMain {
 
@@ -70,7 +67,5 @@ public class MyBlockingQueueMain {
 		
 		Thread.sleep(1000);
 		
-
 	}
-
 }
