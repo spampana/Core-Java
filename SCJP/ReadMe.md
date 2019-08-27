@@ -107,12 +107,7 @@ There are 53 reserved words in Java.
 
 enum in Java
 ============
-
-Enumerations serve the purpose of representing a group of named constants in a programming language.
-
 Enums are used when we know all possible values at compile time.
-
-In Java, we can also add variables, methods and constructors to it.
 
 The main objective of enum is to define our own data types(Enumerated Data Types).
 
@@ -164,24 +159,3 @@ These methods are present inside java.lang.Enum.
 values() method can be used to return all values present inside enum.
 Order is important in enums.By using ordinal() method, each enum constant index can be found, just like array index.
 valueOf() method returns the enum constant of the specified string value, if exists.
-
-
-enum and constructor :
----------------------
-enum can contain constructor and it is executed separately for each enum constant at the time of enum class loading.
-We can’t create enum objects explicitly and hence we can’t invoke enum constructor directly.
-
-enum and methods :
-------------------
-enum can contain concrete methods only i.e. no any abstract method.
-
-
-Enum with Customized Value
---------------------------
-
-By default enums have their own string values, we can also assign some custom values to enums. 
-
-enum  Fruits
-{
-    APPLE(“RED”), BANANA(“YELLOW”), GRAPES(“GREEN”);
-}
