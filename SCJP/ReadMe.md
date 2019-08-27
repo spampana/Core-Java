@@ -159,3 +159,36 @@ These methods are present inside java.lang.Enum.
 values() method can be used to return all values present inside enum.
 Order is important in enums.By using ordinal() method, each enum constant index can be found, just like array index.
 valueOf() method returns the enum constant of the specified string value, if exists.
+
+
+
+StringBuffer appendCodePoint() Method
+=======================================
+The java.lang.StringBuffer.appendCodePoint(int cp)is the method which appends the string representation of the codePoint argument to this sequence.
+
+Syntax :     public StringBuffer appendCodePoint(int cp)
+Parameters : The method accepts a single parameter cp of integer type and refers to the Unicode code point.
+Return Value : The method returns this object after appending the string represented by the codepoint.
+
+// Java praogram to illustrate the java.lang.StringBuffer.appendCodePoint(int cp) 
+
+import java.lang.*; 
+  
+public class Geeks { 
+  
+    public static void main(String[] args) 
+    { 
+  
+        StringBuffer sbf = new StringBuffer("Geeksforgeeks"); 
+        System.out.println("String buffer = " + sbf); 
+  
+        // Here it appends the CodePoint as String to the string buffer 
+        sbf.appendCodePoint(65); 
+        System.out.println("After appending CodePoint is = " + sbf); 
+    } 
+} 
+
+Output:
+s
+String buffer = Geeksforgeeks
+After appending CodePoint is = GeeksforgeeksA
