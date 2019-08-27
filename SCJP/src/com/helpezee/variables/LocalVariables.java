@@ -2,6 +2,7 @@ package com.helpezee.variables;
 
 // A variable defined within a block or method or constructor is called local variable.
 //Initialization of Local Variable is Mandatory.
+//static local variables are not allowed in Java
 public class LocalVariables { 
 	
 	public void StudentAge() 
