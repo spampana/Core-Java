@@ -192,3 +192,28 @@ Output:
 s
 String buffer = Geeksforgeeks
 After appending CodePoint is = GeeksforgeeksA
+
+
+Type conversion in Java
+=======================
+
+Widening
+--------
+
+When you assign value of one data type to another, the two types might not be compatible with each other. 
+If the data types are compatible, then Java will perform the conversion automatically known as Automatic Type Conversion 
+and if not then they need to be casted or converted explicitly. 
+
+Widening conversion takes place when two data types are automatically converted. This happens when:
+
+a)The two data types are compatible.
+b)When we assign value of a smaller data type to a bigger data type.
+
+Narrowing
+--------
+
+If we want to assign a value of larger data type to a smaller data type we perform explicit type casting or narrowing.
+
+This is useful for incompatible data types where automatic conversion cannot be done.
+
+Here, target-type specifies the desired type to convert the specified value to.
