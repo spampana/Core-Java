@@ -3,14 +3,6 @@ Java8 Stream
 
 A stream does not store data and, in that sense, is not a data structure. It also never modifies the underlying data source.
 
-stream operations are divided into intermediate and terminal operations.
-
-A stream pipeline consists of a stream source, followed by zero or more intermediate operations, and a terminal operation.
-
-Computation on the source data is only performed when the terminal operation is initiated, and source elements are consumed only as needed.
-
-All intermediate operations are lazy, so they’re not executed until a result of a processing is actually needed.
-
 
 
 java 8 Stream reduce method
