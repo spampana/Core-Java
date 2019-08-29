@@ -8,11 +8,12 @@ class QuickSort {
 	 * than pivot) to left of pivot and all greater elements to right of pivot
 	 */
 	int partition(int arr[], int low, int high) {
+		
 		int pivot = arr[high];
 		int i = (low - 1); // index of smaller element
+		System.out.println(i);
 		for (int j = low; j < high; j++) {
-			// If current element is smaller than or
-			// equal to pivot
+			// If current element is smaller than or equal to pivot
 			if (arr[j] <= pivot) {
 				i++;
 
@@ -33,8 +34,9 @@ class QuickSort {
 
 	
 	/*
-	 * The main function that implements QuickSort() arr[] --> Array to be
-	 * sorted, low --> Starting index, high --> Ending index
+	 * The main function that implements QuickSort() arr[] --> Array to be sorted, 
+	 * low --> Starting index, 
+	 * high --> Ending index
 	 */
 	void sort(int arr[], int low, int high) {
 		if (low < high) {
@@ -43,8 +45,7 @@ class QuickSort {
 			 */
 			int pi = partition(arr, low, high);
 
-			// Recursively sort elements before
-			// partition and after partition
+			// Recursively sort elements before partition and after partition
 			sort(arr, low, pi - 1);
 			sort(arr, pi + 1, high);
 		}

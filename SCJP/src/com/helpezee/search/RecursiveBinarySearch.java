@@ -1,7 +1,7 @@
 package com.helpezee.search;
 
 //Java implementation of recursive Binary Search 
-class BinarySearchImplmentation 
+class RecursiveBinarySearch 
 { 
 	// Returns index of element if it is present in arr[startIndex.. endIndex], else return -1 
 	int binarySearch(int arr[], int startIndex, int endIndex, int element) 
@@ -30,7 +30,7 @@ class BinarySearchImplmentation
 	// Driver method to test above 
 	public static void main(String args[]) 
 	{ 
-		BinarySearchImplmentation ob = new BinarySearchImplmentation(); 
+		RecursiveBinarySearch ob = new RecursiveBinarySearch(); 
 		int arr[] = {2,3,4,10,40}; 
 		int startIndex = 0;
 		int endIndex = arr.length; 
