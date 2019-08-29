@@ -10,26 +10,27 @@ class QuickSort {
 	int partition(int arr[], int low, int high) {
 		
 		int pivot = arr[high];
-		int i = (low - 1); // index of smaller element
-		System.out.println(i);
+		int pIndex = low; // index of smaller element 
+		System.out.println(pIndex);
+		
 		for (int j = low; j < high; j++) {
+		
 			// If current element is smaller than or equal to pivot
 			if (arr[j] <= pivot) {
-				i++;
-
-				// swap arr[i] and arr[j]
-				int temp = arr[i];
-				arr[i] = arr[j];
+				// swap arr[pIndex] and arr[j]
+				int temp = arr[pIndex];
+				arr[pIndex] = arr[j];
 				arr[j] = temp;
+				pIndex++;
 			}
 		}
 
 		// swap arr[i+1] and arr[high] (or pivot)
-		int temp = arr[i + 1];
-		arr[i + 1] = arr[high];
+		int temp = arr[pIndex];
+		arr[pIndex] = arr[high];
 		arr[high] = temp;
 
-		return i + 1;
+		return pIndex;
 	}
 
 	
@@ -55,11 +56,11 @@ class QuickSort {
 	// Driver program
 	public static void main(String args[]) {
 		
-		int arr[] = { 10, 7, 8, 9, 1, 5 };
+		int arr[] = {32, 10, 7, 8, 9, 1, 5,30 };
 		int n = arr.length;
 
 		QuickSort ob = new QuickSort();
-		ob.sort(arr, 0, n - 1);
+		ob.sort(arr, 0, n-1);
 
 		System.out.println("sorted array");
 		printArray(arr);
@@ -72,7 +73,5 @@ class QuickSort {
 			System.out.print(arr[i] + " ");
 		System.out.println();
 	}
-
 	
 }
-/* This code is contributed by Rajat Mishra */
