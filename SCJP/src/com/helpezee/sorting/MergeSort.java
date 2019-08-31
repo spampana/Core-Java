@@ -63,7 +63,7 @@ class MergeSort
 	} 
 
 	// Main function that sorts arr[low..high] using  merge() 
-	void sort(int arr[], int low, int high) 
+	void mergeSort(int arr[], int low, int high) 
 	{ 
 		if (low < high) 
 		{ 
@@ -71,8 +71,8 @@ class MergeSort
 			int mid = (low+high)/2; 
 
 			// Sort first and second halves 
-			sort(arr, low, mid); 
-			sort(arr , mid+1, high); 
+			mergeSort(arr, low, mid); 
+			mergeSort(arr , mid+1, high); 
 
 			// Merge the sorted halves 
 			merge(arr, low, mid, high); 
@@ -97,7 +97,7 @@ class MergeSort
 		printArray(arr); 
 
 		MergeSort ob = new MergeSort(); 
-		ob.sort(arr, 0, arr.length-1); 
+		ob.mergeSort(arr, 0, arr.length-1); 
 
 		System.out.println("\nSorted array"); 
 		printArray(arr); 
